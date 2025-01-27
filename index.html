@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a JavaScript</title>
+</head>
+<body>
+    <h1>Intro a JavaScript</h1>
+    <button onclick="verificaEdad()">Comprobar edad</button>
+    <button onclick="tablaMultiplicar()">Tabla de multiplicar</button>
+    <button onclick="calculaMedia()">Calcula media</button>
+    <script>
+        function verificaEdad(){
+            const mayoriaEdad =18;
+        let edad = prompt ('Dime tu edad');
+        if (edad<mayoriaEdad){
+            document.write("No puedes entrar en este sitio");
+        } else{
+            document.write("<h2>Bienvenido, tenga cuidad</h2>");
+        }
+        document.write('tenga usted un buen dia');
+        }
+        function media2Numeros(a,b){
+            let suma = a+b;
+            return suma/2;
+        }
+        function calculaMedia(){
+            let n1 = prompt("Dime el primer número");
+            let n2 = prompt("Dime el segundo número");
+            if (isNaN(n1) || isNaN(n2)){
+                alert("Solo se aceptan números")
+                calculaMedia();
+            }else{
+            let media = media2Numeros(Number(n1),Number(n2));
+            alert("La media de "+ n1 + " y "+ n2 +" es "+ media)
+            }
+        }
+        function tablaMultiplicar(){
+            let numero = prompt("Dime de que numero quieres la tabla");
+            let cadena= '';
+            for(let i=0;i<=10;i++ ){
+                cadena = cadena + numero + " * " + i + " = " + numero*i + "<br>";
+            }
+            document.write(cadena);
+        }
+  
+    </script>
+    
+</body>
+</html>
