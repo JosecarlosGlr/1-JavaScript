@@ -11,6 +11,7 @@
     <button onclick="tablaMultiplicar()">Tabla de multiplicar</button>
     <button onclick="calculaMedia()">Calcula media</button>
     <button onclick="posicion()">Alineacion</button>
+    <button onclick="imprimeAlineación()">Imprime alineacion</button>
     <script>
         function verificaEdad(){
             const mayoriaEdad =18;
@@ -55,7 +56,13 @@
             }
             alert('En la posición ' + numero + ' juega '+ alineacion[numero-1]);
         }
-
+        function imprimeAlineación(){
+        let cadena ='';
+        for(let i = 0; i<alineacion.length;i++){
+        cadena += i + "."+ alineacion[i]+"<br>"    
+        }
+        document.write(cadena);
+        }
   
     </script>
     
