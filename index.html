@@ -10,7 +10,7 @@
     <button onclick="verificaEdad()">Comprobar edad</button>
     <button onclick="tablaMultiplicar()">Tabla de multiplicar</button>
     <button onclick="calculaMedia()">Calcula media</button>
-    <button onclick="alineacion()">Alineacion</button>
+    <button onclick="posicion()">Alineacion</button>
     <script>
         function verificaEdad(){
             const mayoriaEdad =18;
@@ -49,8 +49,13 @@
 
         function posicion(){
             let numero = prompt("Dime el número");
+            if (numero > alineacion.length || numero<1){
+                alert("No hay jugador con ese numero")
+            }else{
             alert('En la posición ' + numero + ' juega '+ alineacion[numero-1]);
+            }
         }
+
   
     </script>
     
