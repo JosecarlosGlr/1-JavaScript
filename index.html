@@ -51,9 +51,9 @@
             let numero = prompt("Dime el número");
             if (numero > alineacion.length || numero<1){
                 alert("No hay jugador con ese numero")
-            }else{
-            alert('En la posición ' + numero + ' juega '+ alineacion[numero-1]);
+                return;
             }
+            alert('En la posición ' + numero + ' juega '+ alineacion[numero-1]);
         }
 
   
