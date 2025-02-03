@@ -4,67 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro a JavaScript</title>
+    <style>
+        #foto{
+            width: 500px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Intro a JavaScript</h1>
+    <h1 id="titulo">Intro a JavaScript</h1>
     <button onclick="verificaEdad()">Comprobar edad</button>
     <button onclick="tablaMultiplicar()">Tabla de multiplicar</button>
     <button onclick="calculaMedia()">Calcula media</button>
+    <button onclick="pedirLadosTriangulos()">Calcula area triangulo</button>
     <button onclick="posicion()">Alineacion</button>
     <button onclick="imprimeAlineación()">Imprime alineacion</button>
-    <script>
-        function verificaEdad(){
-            const mayoriaEdad =18;
-        let edad = prompt ('Dime tu edad');
-        if (edad<mayoriaEdad){
-            document.write("No puedes entrar en este sitio");
-        } else{
-            document.write("<h2>Bienvenido, tenga cuidad</h2>");
-        }
-        document.write('tenga usted un buen dia');
-        }
-        function media2Numeros(a,b){
-            let suma = a+b;
-            return suma/2;
-        }
-        function calculaMedia(){
-            let n1 = prompt("Dime el primer número");
-            let n2 = prompt("Dime el segundo número");
-            if (isNaN(n1) || isNaN(n2)){
-                alert("Solo se aceptan números")
-                calculaMedia();
-            }else{
-            let media = media2Numeros(Number(n1),Number(n2));
-            alert("La media de "+ n1 + " y "+ n2 +" es "+ media)
-            }
-        }
-        function tablaMultiplicar(){
-            let numero = prompt("Dime de que numero quieres la tabla");
-            let cadena= '';
-            for(let i=0;i<=10;i++ ){
-                cadena = cadena + numero + " * " + i + " = " + numero*i + "<br>";
-            }
-            document.write(cadena);
-        }
-        let alineacion =['Chech','Hazard','Kante','Lukaku']
+    <button onclick="cambiatitulo()">Cambia el titulo</button>
 
-        function posicion(){
-            let numero = prompt("Dime el número");
-            if (numero > alineacion.length || numero<1){
-                alert("No hay jugador con ese numero")
-                return;
-            }
-            alert('En la posición ' + numero + ' juega '+ alineacion[numero-1]);
-        }
-        function imprimeAlineación(){
-        let cadena ='';
-        for(let i = 0; i<alineacion.length;i++){
-        cadena += i+1 + "."+ alineacion[i]+"<br>"    
-        }
-        document.write(cadena);
-        }
-  
-    </script>
+    <p>
+        <h2>Área Triángulo</h2>
+        <label for="base">Base</label><input type="number" id="base">
+        <label for="altura">Altura</label><input type="number" id="altura">
+        <button onclick="areaTrianguloInputs()">Calcular área</button>
+        <h2 id="resultado">Tu resultado es:</h2>
+    </p>
+    <p>
+        <img id="foto" src="https://www.turismociudadreal.com/wp-content/uploads/2024/12/1528205028_140516mc_0177.jpg" alt="">
+        <button onclick="cambiarImagen()">Cambiar imagen</button>
+    </p>
     
+    <script src="./funciones.js"> 
+    
+    </script>
 </body>
 </html>
